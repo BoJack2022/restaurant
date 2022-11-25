@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('assets/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/responsive.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                        <a href="#">
+                        <span class="icon logo"><ion-icon name="logo-firefox"></ion-icon></ion-icon></span>
+                        <span class="title">Restaurant</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="{{path('admin')}}">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="{{path('customers')}}">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Customers</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="{{path('messages')}}">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="title">FeedBack</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                        <span class="title">Help</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="title">Password</span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sing Out</span>
+                        </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+               <div class="toggle">
+                  <ion-icon name="menu-outline"></ion-icon>
+               </div>
+               <!-- search -->
+               <div class="search">
+                  <label>
+                     <input type="text" placeholder="search here">
+                     <ion-icon name="search-outline"></ion-icon>
+                  </label>
+               </div>
+               <!-- user image -->
+               <div class="user">
+                  <img src="{{asset('assets/image/user.jpg')}}" alt="">
+               </div>
+            </div>
+           {% block body %}
+            <!-- cards -->
+            <div class="cardbox">
+               <div class="card">
+                  <div>
+                     <div class="number">2,200</div>
+                     <div class="cardName">Daily Views</div>
+                  </div>
+                  <div class="iconBx">
+                     <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+               </div>
+               <div class="card">
+                  <div>
+                     <div class="number">230</div>
+                     <div class="cardName">Sales</div>
+                  </div>
+                  <div class="iconBx">
+                     <ion-icon name="cart-outline"></ion-icon>
+                  </div>
+               </div>
+               <div class="card">
+                  <div>
+                     <div class="number">320</div>
+                     <div class="cardName">Comments</div>
+                  </div>
+                  <div class="iconBx">
+                     <ion-icon name="chatbubbles-outline"></ion-icon>
+                  </div>
+               </div>
+               <div class="card">
+                  <div>
+                     <div class="number">$5,425</div>
+                     <div class="cardName">Earning</div>
+                  </div>
+                  <div class="iconBx">
+                     <ion-icon name="cash-outline"></ion-icon>
+                  </div>
+               </div>
+            </div>
+            <div class="details">
+               <!--  order details list -->
+               <div class="recentOrder">
+                  <div class="cardHeader">
+                     <h2>Recent Order</h2>
+                     <a href="#" class="btn">View All</a>
+                  </div>
+                  <table>
+                     <thead>
+                        <tr>
+                           <td>Name</td>
+                           <td>Price</td>
+                           <td>Payment</td>
+                           <td>Status</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>star</td>
+                           <td>$1200</td>
+                           <td>Paid</td>
+                           <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                           <td>Window Coolers</td>
+                           <td>$110</td>
+                           <td>Due</td>
+                           <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                           <td>Speakers</td>
+                           <td>$620</td>
+                           <td>Paid</td>
+                           <td><span class="status return">Return</span></td>
+                        </tr>
+                        <tr>
+                           <td>Hp Laptop</td>
+                           <td>$110</td>
+                           <td>Due</td>
+                           <td><span class="status inprogress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                           <td>Apple Watch</td>
+                           <td>$1200</td>
+                           <td>Paid</td>
+                           <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                           <td>star</td>
+                           <td>$1200</td>
+                           <td>Paid</td>
+                           <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                           <td>Wall Fan</td>
+                           <td>$110</td>
+                           <td>Paid</td>
+                           <td><span class="status return">Return</span></td>
+                        </tr>
+                        <tr>
+                           <td>Adidas Shoes</td>
+                           <td>$620</td>
+                           <td>Paid</td>
+                           <td><span class="status inprogress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                           <td>Denim Shirts</td>
+                           <td>$110</td>
+                           <td>Due</td>
+                           <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                           <td>casual Shoes</td>
+                           <td>$575</td>
+                           <td>Due</td>
+                           <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                           <td>Denim Shirts</td>
+                           <td>$110</td>
+                           <td>Due</td>
+                           <td><span class="status inprogress">In Progress</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- new Customers -->
+               <div class="recentCustomer">
+                  <div class="cardHeader">
+                     <h2>Recent Customer</h2>
+                     <a href="#" class="btn">View All</a>
+                  </div>
+                  <table>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img1.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Majid <br><span>Iran</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img2.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>David <br><span>Italy</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img3.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Zahra <br><span>USA</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img4.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Shabnam <br><span>Malaziya</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img5.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Mohhamad<br><span>India</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img6.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Sajjad <br><span>Japan</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img7.jpg')}}" alt=""></div></td>
+                        <td><h4>Katayon<br><span>Azerbayjan</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img8.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>Amir<br><span>Turkey</span></h4></td>
+                     </tr>
+                     <tr>
+                        <td><div class="imgBox"><img src="{{asset('assets/image/img9.jpg')}}" alt="customer image"></div></td>
+                        <td><h4>soon<br><span>China</span></h4></td>
+                     </tr>
+                  </table>
+               </div>               
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="{{asset('assets/script.js')}}"></script>
+</body>
+</html>

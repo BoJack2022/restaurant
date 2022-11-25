@@ -1,0 +1,14 @@
+{% extends 'mabase.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<h1>Connexion! </h1>
+
+<form action="{{path('security_login')}}" method="post">
+<input placeholder="adresse email" required name="_username" type="text" class="form-control">
+<input placeholder="mot de passe" required name="_password" type="password" class="form-control">
+
+<button type="submit" class="btn btn-success">Connexion</button>
+
+{% endblock %}
